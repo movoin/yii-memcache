@@ -43,7 +43,7 @@ class Memcache extends CMemCache
      */
     public function flushNS($namespace)
     {
-        $this->setValue($this->generateNamespaceKey($namespace), time(), 0);
+        $this->setValue($this->genNamespaceKey($namespace), time(), 0);
     }
 
     /**
@@ -53,8 +53,7 @@ class Memcache extends CMemCache
     protected function generateUniqueKey($key)
     {
         $namespaceKey = array();
-        if(strrpos($key, '.') !== false)
-        {
+        if(strrpos($key, '.') !== false) {
             $ns = explode('.', $key);
             $namespace = array_shift($ns);
             array_push($namespaceKey, $this->getNamespaceValue($namespace));
@@ -62,7 +61,7 @@ class Memcache extends CMemCache
         } else {
             $namespaceKey = array($key);
         }
-        return $this->generateNamespaceKey(implode('.', $namespaceKey));
+        return $this->genNamespaceKey(implode('.', $namespaceKey));
     }
 
     /**
@@ -71,7 +70,7 @@ class Memcache extends CMemCache
      * @param string $key 缓存键名
      * @return string 键名对应的命名空间存储键名
      */
-    protected function generateNamespaceKey($key)
+    protected function genNamespaceKey($key)
     {
         $namespaceKey = "{self::$_rootNamespace}.{$key}";
         return $this->hashKey ? md5($namespaceKey) : $namespaceKey;
@@ -85,8 +84,7 @@ class Memcache extends CMemCache
      */
     protected function getNamespaceValue($key)
     {
-        if (($value = $this->getValue($this->generateNamespaceKey($key))) === false)
-        {
+        if (($value = $this->getValue($this->genNamespaceKey($key))) === false) {
             $this->flushNS($key);
         }
 
