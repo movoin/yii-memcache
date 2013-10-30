@@ -1,0 +1,24 @@
+{
+    "name": "movoin/memcache",
+    "description": "A memcache warpper for Yii CMemCache. Let Memcache provide namespace support, easier to delete a group cache data.",
+    "keywords": ["yii", "memcache", "component", "namespace"],
+    "homepage": "https://github.com/movoin/yii-memcache",
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Allen Luo",
+            "email": "movoin@gmail.com",
+            "homepage": "http://blog.movoin.com/"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/movoin/yii-memcache/issues?state=open",
+        "source": "https://github.com/movoin/yii-memcache"
+    },
+    "require": {
+        "php": ">=5.3.0",
+        "yiisoft/yii": ">=1.1.14"
+    },
+    "target-dir": "src"
+}
