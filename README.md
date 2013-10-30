@@ -24,7 +24,7 @@
 
 ### 安装 ###
 
-"movoin/memcache" => "stable"
+"movoin/yii-memcache" => "stable"
 
 
 ### 如何配置 ###
