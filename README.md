@@ -26,6 +26,8 @@
 
 "movoin/yii-memcache" => "stable"
 
+> 暂未提交
+
 
 ### 如何配置 ###
 
