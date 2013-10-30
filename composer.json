@@ -1,5 +1,5 @@
 {
-    "name": "movoin/memcache",
+    "name": "movoin/yii-memcache",
     "description": "A memcache warpper for Yii CMemCache. Let Memcache provide namespace support, easier to delete a group cache data.",
     "keywords": ["yii", "memcache", "component", "namespace"],
     "homepage": "https://github.com/movoin/yii-memcache",
